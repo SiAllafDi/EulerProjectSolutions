@@ -1,11 +1,11 @@
 # Common IntelliJ Platform excludes
 
 # User specific
-**/.idea/**/workspace.xml
-**/.idea/**/tasks.xml
-**/.idea/shelf/*
-**/.idea/dictionaries
-**/.idea/httpRequests/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/shelf/*
+.idea/dictionaries
+.idea/httpRequests/
 
 # Sensitive or high-churn files
 **/.idea/**/dataSources/
@@ -29,6 +29,15 @@
 _UpgradeReport_Files/
 [Pp]ackages/
 
+
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+**/.DS_Store
+bin
+obj
+**/.vscode
+**/*.zip
+**/.vs
+**/*.user
