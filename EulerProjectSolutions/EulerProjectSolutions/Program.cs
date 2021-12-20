@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EulerProjectSolutions
 {
@@ -8,7 +9,6 @@ namespace EulerProjectSolutions
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            
         }
 
 
@@ -182,7 +182,54 @@ namespace EulerProjectSolutions
         /*  End of Problem 3 */
         
         #endregion
+
+        #region Problem 4
         
+        /* Problem 4
+        
+        A palindromic number reads the same both ways. The largest palindrome made from
+         the product of two 2-digit numbers is 9009 = 91 × 99.
+        Find the largest palindrome made from the product of two 3-digit numbers.
+         
+       */
+        
+        /*
+         * Function to check if number is palindrome
+        */
+
+        private static bool IsPalindrome(int number)
+        {
+            List<char> numberToLIst = number.ToString().ToCharArray().ToList();
+
+            List<char> inverseOfNumber = number.ToString().ToCharArray().Reverse().ToList();
+            
+            return numberToLIst .SequenceEqual(inverseOfNumber);
+        }
+
+        public static int LargestPalindromeProduct()
+        {
+
+            List<int> listOfPalindrome = new List<int>();
+            for (int outerIndex = 100; outerIndex <= 999; outerIndex++)
+            {
+                
+                for (int innerIndex = 100; innerIndex <= 999; innerIndex++)
+                {
+                    
+                    if (IsPalindrome(outerIndex * innerIndex) )
+                    {
+                        listOfPalindrome.Add(outerIndex * innerIndex);
+                    }
+                    
+                }
+            }
+
+            return listOfPalindrome.Max();
+        }
+        
+        /*  End of Problem 4 */
+        
+        #endregion
         
         
     }
