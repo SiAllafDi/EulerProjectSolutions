@@ -197,7 +197,7 @@ namespace EulerProjectSolutions
          * Function to check if number is palindrome
         */
 
-        private static bool IsPalindrome(int number)
+        private static bool IsPalindrome(int number)  // solution pour le moment mais doit etre modifiee plus tard sans utiliser le reverse !!!
         {
             List<char> numberToLIst = number.ToString().ToCharArray().ToList();
 
